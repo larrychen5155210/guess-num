@@ -1,8 +1,17 @@
-#猜數字(1~100)
+#猜數字(隨機數字)
 import random
+import time
 
-r = random.randint(1, 100)
+print("這是一個猜隨機數字的遊戲")
+time.sleep(1) #程式暫停1秒
+start = input('請決定隨機數字的起始值: ')
+end = input('請決定隨機數字的結束值: ')
+start = int(start)
+end = int(end)
+r = random.randint(start, end)
 count = 0
+print('遊戲開始')
+time.sleep(1)
 while True:
 	count += 1 # count = count + 1
 	num = input('請輸入數字: ')
